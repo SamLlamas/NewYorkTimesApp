@@ -14,13 +14,19 @@
         <h1 id = "mainHeader">New York Times Search</h1>
     </div>
 
-    <div id="searchContainer">
+    <div id="searchContainer"> 
+      <h2 id="searchHeader"> Search Parameters</h2>
         <form id="searchParam">
             <label for="terms">Search Term</label>
             <input type="text" id="inputTerm" name="terms">
 
             <label for="numRecords">Number of Records to Retrieve</label>
-            <input type="number" id="inputNum" name="numRecords" min="1">
+            <input list="numbers" id="inputNum" name="numRecords">
+            <datalist id="numbers">
+                <option value="1">
+                <option value="5">
+                <option value="10">
+            </datalist> 
 
             <label for="startYear">Start Year (optional)</label>
             <input type="number" id="inputStart" name="startYear" min="1981">
@@ -33,7 +39,10 @@
         </form>
     </div>
 
+
+
     <div id="articlesContainer">
+        <h2 id="articleHeader"> Top Articles</h2>
 
     </div>
 
