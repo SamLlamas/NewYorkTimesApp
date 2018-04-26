@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+#headerContainer {
+    margin: 0 auto;
+}
+
+#mainHeader {}
+
+#searchContainer {
+    margin: auto 0;
+}
+
+#articleContainer {
+    margin: auto 0;
+}
