@@ -8,9 +8,22 @@ body {
 
 #headerContainer {
     margin: 0 auto;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-bottom: 100px;
+    border: 50px solid rgb(2, 2, 56);
 }
 
-#mainHeader {}
+#mainHeader {
+    background-color: rgb(2, 2, 56);
+}
+
+h1 {
+    font-style: bold;
+    font-size: 30px;
+    color: white;
+    text-align: center; 
+}
 
 #searchContainer {
     margin: auto 0;
