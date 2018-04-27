@@ -1,20 +1,24 @@
-
 var seachTerm = "";
 var startDate = "" + "0101";
 var endDate = "" + "0101";
-var numberOfRecords = 0;
-var limit = 10;
+var limit = 0;
+
+$("input[name=numbers]").focusout(function(){
+  limit = $(this).val();
+});
+
 
 
 
 $("#searchButton").on("click", function (event) {
+  
   event.preventDefault();
   console.log("clicked");
   searchTerm = $("#inputTerm").val().trim();
   startDate = $("#inputStart").val().trim() + "0101";
   endDate = $("#inputEnd").val().trim() + "0101";
-  console.log("limit: " + limit);
-  limit = $("#numbers").val().trim();
+  
+
 
   //datalistObject.options
 
@@ -24,7 +28,7 @@ $("#searchButton").on("click", function (event) {
   console.log("limit: " + limit);
 
 
-  $("#SelectEntityPrimaryName option:selected").val()
+  
 
   var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
   url += '?' + $.param({
@@ -45,24 +49,4 @@ $("#searchButton").on("click", function (event) {
       console.log(result.response.docs[i].byline.original);
 
     }
-
-
-
-
-
-
-
-  }).fail(function (err) {
-    throw err;
-  });
 });
-
-var numberOfRecords = $("#inputNum").val();
-
-  //create a for loop and limit the number of indexes
-  //number of articles = set value $(""). 
-  //response.docs for loop
-  // for (i = 0; i <= numberOfRecords; i++) {
-
-
-  // };
