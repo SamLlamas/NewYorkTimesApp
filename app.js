@@ -37,6 +37,7 @@ $("#searchButton").on("click", function (event) {
     'begin_date': startDate,
     'end_date': endDate
   });
+
   $.ajax({
     url: url,
     method: 'GET',
@@ -47,11 +48,8 @@ $("#searchButton").on("click", function (event) {
     for (var i = 0; i < limit; i++) {
       $("#articlesContainer").append("<p>" + result.response.docs[i].byline.original + "</p>");
       console.log(result.response.docs[i].byline.original);
+      }
+    
+    });
 
-    }
-<<<<<<< HEAD
-});
-=======
-});
-
->>>>>>> 68c589b9165f577d569ca6e0e9040e6f549aac3d
+  });
