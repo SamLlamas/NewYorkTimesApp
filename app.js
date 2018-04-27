@@ -2,6 +2,7 @@
 var seachTerm = "";
 var startDate = "" + "0101";
 var endDate = "" + "0101";
+var numberOfRecords = 0;
 
 function searchNYTimes(seachTerm) {
 
@@ -20,11 +21,13 @@ $.ajax({
 }).fail(function(err) {
   throw err;
 });
-$("someId".on("click", function(){
+$("#submit").on("click", function(){
     searchTerm = $("#searchParam").val().trim();
-    startDate = $("#inputStart").val().trim();
-    endDate = $("#inputEnd").val().trim();
-}))
+    startDate = $("#inputStart"+"0101").val().trim();
+    endDate = $("#inputEnd"+"0101").val().trim();
+    $("#SelectEntityPrimaryName option:selected").val()
+
+});
 
 
 //create a for loop and limit the number of indexes
