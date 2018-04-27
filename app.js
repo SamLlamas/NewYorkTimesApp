@@ -16,6 +16,7 @@ $("#searchButton").on("click", function (event) {
   console.log("limit: " + limit);
   limit = $("#numbers").val().trim();
 
+  //datalistObject.options
 
   console.log("searchTerm: " + searchTerm);
   console.log("startDate: " + startDate);
@@ -37,7 +38,7 @@ $("#searchButton").on("click", function (event) {
     method: 'GET',
   }).done(function (result) {
     console.log(result);
-    //$("#articlesContainer").append("<p>" + result.response.docs[0].byline.original + "</p>");
+    $("#articlesContainer").append("<p>" + result.response.docs[0].byline.original + "</p>");
 
     for (var i = 0; i < limit; i++) {
       $("#articlesContainer").append("<p>" + result.response.docs[i].byline.original + "</p>");
