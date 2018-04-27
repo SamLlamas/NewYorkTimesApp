@@ -42,16 +42,16 @@ $("#searchButton").on("click", function (event) {
     method: 'GET',
   }).done(function (result) {
     console.log(result);
-    $("#articlesContainer").append("<p>" + result.response.docs[0].byline.original + "</p>");
+   // $("#articlesContainer").append("<p>" + result.response.docs[0].headline.main + "</p>");
+    // $("#articlesContainer").append("<p>" + result.response.docs[0].byline.original + "</p>");
 
     for (var i = 0; i < limit; i++) {
-      $("#articlesContainer").append("<p>" + result.response.docs[i].byline.original + "</p>");
+      $("#articlesContainer").append(
+        "<div class='resultBox'>" + "<h3>" + "<p>" + result.response.docs[i].headline.main + "</p>" + "</h3>" + "<p>" + "<h4>" + result.response.docs[i].byline.original + "</h4>" + "</p>" + "</div>");
+      
+    
       console.log(result.response.docs[i].byline.original);
 
     }
-<<<<<<< HEAD
 });
-=======
 });
-
->>>>>>> 68c589b9165f577d569ca6e0e9040e6f549aac3d
