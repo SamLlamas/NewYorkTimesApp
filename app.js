@@ -37,6 +37,7 @@ $("#searchButton").on("click", function (event) {
     'begin_date': startDate,
     'end_date': endDate
   });
+
   $.ajax({
     url: url,
     method: 'GET',
@@ -51,7 +52,8 @@ $("#searchButton").on("click", function (event) {
       
     
       console.log(result.response.docs[i].byline.original);
+      }
+    
+    });
 
-    }
-});
-});
+  });
