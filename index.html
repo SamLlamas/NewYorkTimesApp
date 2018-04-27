@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     
 </head>
 <body>
@@ -19,7 +21,7 @@
         <form id="searchParam">
 
             <label>Search Term</label>
-            <input type="text" id="inputTerm" name="terms">
+            <input type="text" id="inputTerm" name="terms" value="russia">
 
             <label for="numRecords">Number of Records to Retrieve</label>
             <input list="numbers" id="inputNum" name="numRecords">
@@ -30,10 +32,10 @@
             </datalist> 
 
             <label for="startYear">Start Year (optional)</label>
-            <input type="number" id="inputStart" name="startYear" min="1981">
+            <input type="number" id="inputStart" name="startYear" min="1981" value="2017">
             
             <label for="endYear">Start Year (optional)</label>
-            <input type="number" id="inputEnd" name="startYears" max="2018">
+            <input type="number" id="inputEnd" name="startYears" max="2018" value="2018">
             
             <input id= "searchButton" type="submit" value="Search" >
             <input type="reset">
