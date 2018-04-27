@@ -3,7 +3,7 @@ var seachTerm = "";
 var startDate = "" + "0101";
 var endDate = "" + "0101";
 
-function searchNYTimes(seachTerm, startDate, endDate) {
+function searchNYTimes(seachTerm) {
 
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 url += '?' + $.param({
@@ -21,10 +21,17 @@ $.ajax({
   throw err;
 });
 $("someId".on("click", function(){
-    searchTerm = $("searchTermofUser").val.trim()
+    searchTerm = $("#searchParam").val().trim();
+    startDate = $("#inputStart").val().trim();
+    endDate = $("#inputEnd").val().trim();
 }))
-};
+
 
 //create a for loop and limit the number of indexes
 //number of articles = set value $(""). 
 //response.docs for loop
+for (i = 0; i <= 10; i++) {
+
+
+};
+};
