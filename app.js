@@ -49,4 +49,9 @@ $("#searchButton").on("click", function (event) {
       console.log(result.response.docs[i].byline.original);
 
     }
+<<<<<<< HEAD
 });
+=======
+});
+
+>>>>>>> 68c589b9165f577d569ca6e0e9040e6f549aac3d
