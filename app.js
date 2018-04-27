@@ -21,19 +21,19 @@ $.ajax({
 }).fail(function(err) {
   throw err;
 });
-$("#submit").on("click", function(){
+$("#searchButton").on("click", function(){
     searchTerm = $("#searchParam").val().trim();
     startDate = $("#inputStart"+"0101").val().trim();
     endDate = $("#inputEnd"+"0101").val().trim();
     $("#SelectEntityPrimaryName option:selected").val()
 
 });
-
+var numberOfRecords = $("#inputNum").val();
 
 //create a for loop and limit the number of indexes
 //number of articles = set value $(""). 
 //response.docs for loop
-for (i = 0; i <= 10; i++) {
+for (i = 0; i <= numberOfRecords; i++) {
 
 
 };
